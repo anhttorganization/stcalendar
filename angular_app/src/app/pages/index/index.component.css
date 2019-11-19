@@ -1,0 +1,91 @@
+/* .header-link {
+  margin-left: auto;
+}
+.header-link .header-link-item {
+  height: 4rem;
+  padding: 0 0.5rem !important;
+}
+.header-link .header-link-item img {
+  border-radius: 50%;
+  height: 3.125rem;
+  width: 3.125rem;
+}
+.nav {
+  height: 4rem !important;
+  padding: 0;
+}
+.nav .content {
+  height: 100% !important;
+}
+nav.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: #3f51b1;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+}
+.my-breadscum {
+  width: 100%;
+  height: 7rem;
+  padding-top: 4rem;
+  background-color: #e9ecef;
+}
+.slidenav-and-content {
+  min-height: calc(100% - 7rem);
+  margin-bottom: -180px;
+  padding-bottom: 180px;
+}
+.slidenav-and-content .content {
+  width: 100%;
+  height: 100%;
+  background-color: green;
+}
+footer {
+  min-height: 180px;
+  background-color: #242424;
+  padding-top: 1rem;
+  color: white;
+}
+footer .copyRight {
+  border-top: white 1px solid;
+  margin-top: 1.9rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+}
+.container {
+  max-width: 1500px;
+}
+@media (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+  .header-link[_ngcontent-jjs-c1] .header-link-item[_ngcontent-jjs-c1] {
+    height: 4rem;
+    padding: 0 0.5rem !important;
+  }
+}
+@media (max-width: 767px) {
+  .header-link .header-link-item:not(.user-info) {
+    display: none;
+  }
+  .container .mat-drawer-inner-container {
+    width: 90%;
+  }
+  .container mat-sidenav-container {
+    width: 100%;
+  }
+  .container mat-sidenav-container mat-sidenav {
+    width: 66%;
+  }
+}
+.topnav a:not(.logo) {
+  display: none;
+}
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+} */

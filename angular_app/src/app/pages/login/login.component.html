@@ -1,0 +1,38 @@
+<app-layout>
+    <div class="login-component">
+        <mat-card>
+            <mat-card-title class="text-center">Đăng Nhập</mat-card-title>
+            <mat-card-content>
+                <form [formGroup]="form" (ngSubmit)="submit()" id="login-form">
+                    <p>
+                        <mat-form-field>
+                            <input type="text" matInput placeholder="Username" formControlName="username">
+                        </mat-form-field>
+                    </p>
+
+                    <p>
+                        <mat-form-field>
+                            <input type="password" matInput placeholder="Password" formControlName="password">
+                        </mat-form-field>
+                    </p>
+
+                    <p *ngIf="error" class="error">
+                        {{ error }}
+                    </p>
+                    <div>
+                        <mat-checkbox>Nhớ đăng nhập</mat-checkbox> <a href="" class="float-right">Quên mật khẩu</a>
+                    </div>
+                    <div class="button m-2">
+                        <button mat-raised-button color="primary" id="submit">Đăng Nhập</button>
+                    </div>
+                    <mat-divider></mat-divider>
+                    <div class="text-center pt-2">
+                        <a href="">Đăng Ký</a>
+                    </div>
+
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+</app-layout>

@@ -1,0 +1,58 @@
+<app-layout>
+    <div class="register-form">
+        <mat-horizontal-stepper linear #stepper>
+            <mat-step [stepControl]="firstFormGroup">
+                <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>Fill out your name</ng-template>
+                    <mat-form-field>
+                        <mat-label>Chọn loại tài khoản</mat-label>
+                        <mat-select [(value)]="accountType" formControlName="accountType" required>
+                            <mat-option value="Sinh viên">Sinh viên</mat-option>
+                            <mat-option value="Giảng viên">Giảng viên</mat-option>
+                            <mat-option value="Cán bộ">Cán bộ</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <p>Đối tượng tài khoản: {{accountType}}</p>
+
+                    <div>
+                        <button mat-button matStepperNext>Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="secondFormGroup" [optional]="isOptional">
+                <form [formGroup]="secondFormGroup">
+                    <ng-template matStepLabel>Fill out your address</ng-template>
+                    <mat-form-field>
+                        <input matInput placeholder="Gmail" formControlName="gmail" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Họ đệm" formControlName="lastName" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Tên" formControlName="firstName" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Khoa" formControlName="faculty" required>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput [placeholder]="accountType == 'Sinh viên' ? 'Lớp' : 'Bộ môn'" formControlName="class" required>
+                    </mat-form-field>
+                    <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button matStepperNext>Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>Done</ng-template>
+                You are now done.
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button (click)="stepper.reset()">Reset</button>
+                </div>
+            </mat-step>
+        </mat-horizontal-stepper>
+
+    </div>
+</app-layout>

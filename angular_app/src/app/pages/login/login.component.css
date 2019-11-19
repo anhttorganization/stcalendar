@@ -1,0 +1,94 @@
+/* :host {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+} */
+
+mat-card {
+    width: 40%;
+    /* margin: 50px auto; */
+    padding: 2rem !important;
+    /* min-width: 400px; */
+}
+
+#login-form .mat-form-field {
+    width: 100%;
+    /* min-width: 300px; */
+}
+
+#login-form mat-card-title,
+#login-form mat-card-content {
+    display: flex;
+    justify-content: center;
+}
+
+.mat-card-title {
+    font-size: 1.5rem;
+}
+
+.mat-form-field {
+    font-size: 1rem;
+}
+
+.mat-card-title {
+    margin-bottom: 0.3rem !important;
+}
+
+.mat-card-content {
+    font-size: 1rem;
+}
+
+.mat-card {
+    padding: 1.1rem !important;
+    margin: 2rem auto;
+}
+
+#login-form .error {
+    padding: 1rem;
+    width: 100%;
+    color: white;
+    background-color: red;
+}
+
+#login-form .button {
+    display: flex;
+    justify-content: center;
+    /* width: 100%; */
+}
+
+#login-form .button #submit {
+    width: 100%;
+}
+
+.login-component {
+    margin: auto;
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+    .login-component {
+        padding: 1rem 0.4rem;
+    }
+    mat-card {
+        width: 95%;
+        margin: 0 auto;
+        padding-top: 1.7rem;
+    }
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: 12px;
+    }
+    .login-component {
+        /* padding: 2rem 0; */
+        /* height: 500px; */
+    }
+    mat-card {
+        width: 95%;
+        /* margin: 0 auto; */
+        /* padding-top: 2rem; */
+    }
+}

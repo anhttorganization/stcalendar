@@ -1,0 +1,80 @@
+<nav class="header">
+    <div class="container head">
+        <mat-toolbar color="primary">
+            <mat-toolbar-row class="nav">
+                <button mat-icon-button class="menu-button" (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+                <div class="logo-top">
+                    <span>STCalendar</span>
+                </div>
+                <div class="header-link" fxShow="true">
+                    <button mat-button class="header-link-item" onclick="location.href = 'www.yoursite.com';">Trang Chủ</button>
+                    <button mat-button [matMenuTriggerFor]="chucnang" class="header-link-item">Chức Năng <mat-icon>
+              keyboard_arrow_down</mat-icon></button>
+                    <mat-menu #chucnang="matMenu">
+                        <a href="#" mat-menu-item>Thời Khóa biểu</a>
+                        <a href="#" mat-menu-item>Lịch thi</a>
+                        <a href="#" mat-menu-item>Lịch công tác</a>
+                        <a href="#" mat-menu-item>Import lịch</a>
+                    </mat-menu>
+                    <button mat-button [matMenuTriggerFor]="huongdan" class="header-link-item">Hướng Dẫn <mat-icon>
+              keyboard_arrow_down</mat-icon></button>
+                    <mat-menu #huongdan="matMenu">
+                        <a href="#" mat-menu-item>Đăng ký</a>
+                        <a href="#" mat-menu-item>Đăng nhập</a>
+                        <a href="#" mat-menu-item>Cấp 1uyền truy cập Google Calendar</a>
+                        <a href="#" mat-menu-item>Thêm thời khóa biểu</a>
+                        <a href="#" mat-menu-item>Thêm lịch thi</a>
+                        <a href="#" mat-menu-item>Import Excel</a>
+                    </mat-menu>
+
+                    <button mat-button [matMenuTriggerFor]="chinhsach" class="header-link-item">Chính Sách <mat-icon>
+              keyboard_arrow_down</mat-icon></button>
+                    <mat-menu #chinhsach="matMenu">
+                        <a mat-menu-item>Chính sách bảo mật</a>
+                        <a mat-menu-item>Điều khoản sử dụng</a>
+                    </mat-menu>
+                    <button mat-button class="header-link-item" onclick="location.href = 'www.yoursite.com';">Liên hệ</button>
+                    <button mat-button class="header-link-item user-info" onclick="location.href = 'www.yoursite.com';"> <img
+              src="https://place-hold.it/50x50" alt="">
+            <mat-icon>keyboard_arrow_down</mat-icon>
+          </button>
+                </div>
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </div>
+</nav>
+<div class="my-breadscum">
+    <div class="container">
+        <nav aria-label="Page breadcrumb">
+            <ol class="breadcrumb">
+                <li>
+                    <mat-icon>home</mat-icon>&nbsp;&nbsp;&nbsp;
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Tranng Chủ </li>
+                <li class="breadcrumb-item">Item 2</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<div class="container slidenav-and-content">
+    <mat-sidenav-container fxFlexFill>
+        <mat-sidenav #sidenav>
+            <mat-nav-list>
+                <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+                <a href="#" mat-list-item>Menu Item 1</a>
+                <a href="#" mat-list-item>Menu Item 2</a>
+                <a href="#" mat-list-item>Menu Item 3</a>
+                <a href="#" mat-list-item>Menu Item 4</a>
+                <a href="#" mat-list-item>Menu Item 5</a>
+                <a href="#" mat-list-item>Menu Item 6</a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content fxFlexFill class="content">
+            <ng-content #content></ng-content>
+        </mat-sidenav-content>
+
+    </mat-sidenav-container>
+    <!-- <mat-sidenav-content fxFlexFill class="mat-drawer-content mat-sidenav-content">Main content</mat-sidenav-content> -->
+</div>
