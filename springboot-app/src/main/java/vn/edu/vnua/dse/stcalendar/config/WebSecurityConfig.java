@@ -33,6 +33,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	public static final String AUTHENTICATION_HEADER_NAME = "Authorization";
     public static final String AUTHENTICATION_URL = "/api/auth/login";
     public static final String REFRESH_TOKEN_URL = "/api/auth/token";
+    public static final String REGISTER_URL = "/api/auth/register";
+    public static final String REGISTER_CONFIRM_URL ="/api/auth/register/confirm";
     public static final String API_ROOT_URL = "/api/**";
     
     @Autowired private RestAuthenticationEntryPoint authenticationEntryPoint;
@@ -82,6 +84,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         List<String> permitAllEndpointList = Arrays.asList(
                 AUTHENTICATION_URL,
                 REFRESH_TOKEN_URL,
+                REGISTER_URL,
+                REGISTER_CONFIRM_URL,
                 "/console"
             );
 

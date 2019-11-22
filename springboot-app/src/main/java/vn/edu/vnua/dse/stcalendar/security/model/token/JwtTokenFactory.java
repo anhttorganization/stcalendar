@@ -71,4 +71,24 @@ public class JwtTokenFactory {
 
 		return new AccessJwtToken(token, claims);
 	}
+	
+	public JwtToken createRegisterToken(String username) {
+		if (StringUtils.isBlank(username)) {
+			throw new IllegalArgumentException("Không thể tạo JWT Token vì không có username");
+		}
+
+		LocalDateTime currentTime = LocalDateTime.now();
+
+		Claims claims = Jwts.claims().setSubject(username);
+		claims.put("scopes", Arrays.asList(Scopes.REGISTER_TOKEN.authority()));
+
+		String token = Jwts.builder().setClaims(claims).setIssuer(settings.getTokenIssuer())
+				.setId(UUID.randomUUID().toString())
+				.setIssuedAt(Date.from(currentTime.atZone(ZoneId.systemDefault()).toInstant()))
+				.setExpiration(Date.from(currentTime.plusMinutes(settings.getRefreshTokenExpTime())
+						.atZone(ZoneId.systemDefault()).toInstant()))
+				.signWith(SignatureAlgorithm.HS512, settings.getTokenSigningKey()).compact();
+
+		return new AccessJwtToken(token, claims);
+	}
 }

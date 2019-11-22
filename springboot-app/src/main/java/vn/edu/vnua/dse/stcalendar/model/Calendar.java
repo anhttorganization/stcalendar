@@ -35,10 +35,10 @@ public class Calendar {
 	private Long id;
 
 	@Column(name = "student_id")
-	private String StudentId;
+	private String studentId;
 
 	@Column(name = "calendar_id")
-	private String calendar_id;
+	private String calendarId;
 
 	@Column(name = "type")
 	private int type;

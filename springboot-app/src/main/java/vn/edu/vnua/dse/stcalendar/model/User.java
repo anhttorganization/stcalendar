@@ -17,6 +17,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.sun.istack.NotNull;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -34,7 +35,7 @@ import lombok.ToString;
 public class User {
 	// fields
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
 	private Long id;
 
@@ -46,6 +47,9 @@ public class User {
 	
 	@Column(name = "last_name")
 	private String lastName;
+	
+	@Column(name = "avatar")
+	private String avatar;
 	
 	@Column(name = "faculty")
 	private String faculty;

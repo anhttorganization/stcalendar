@@ -19,7 +19,6 @@ public class MyProfileController {
 	 @RequestMapping(value="/api/me", method=RequestMethod.GET, produces = "application/json;charset=UTF-8")
 	    public @ResponseBody User get(JwtAuthenticationToken token) {
 		 	UserContext principal =(UserContext) token.getPrincipal();
-		 	userService.findByUsername(principal.getUsername());
 	        return userService.findByUsername(principal.getUsername()).get();
 	    }
 }
